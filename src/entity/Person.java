@@ -52,7 +52,11 @@ public class Person implements Serializable {
 
     @Override
     public String toString() {
-        return name + " " + surname + " (" + money + "$ " + ")";
+        if (listProducts.size() == 0) {
+            return name + " " + surname + " (" + money + "$)";
+        } else {
+            return name + " " + surname + " (" + money + "$ | " + listProducts + " )";
+        }
     } 
 
     public List<Product> getListProducts() {

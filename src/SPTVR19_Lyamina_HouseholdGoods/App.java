@@ -84,8 +84,11 @@ class App {
                                     listPersons.get(choosed_person).setMoney(listPersons.get(choosed_person).getMoney() - listProducts.get(choosed_product).getPrice());
                                     listPersons.get(choosed_person).getListProducts().add(listProducts.get(choosed_product));
                                     listProducts.remove(choosed_product);
+                                    SaveToFile saveToFile = new SaveToFile();
+                                    saveToFile.saveToFile(listPersons, "listPersons");
+                                    saveToFile.saveToFile(listProducts, "listProducts");
                                 } else {
-                                    //
+                                    System.out.println("Недостаточно денег.");
                                 }
                             
                             } else {

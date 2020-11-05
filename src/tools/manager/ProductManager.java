@@ -2,7 +2,6 @@ package tools.manager;
 
 
 
-import entity.Person;
 import entity.Product;
 import java.util.List;
 import java.util.Scanner;
